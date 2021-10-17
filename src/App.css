@@ -1,38 +1,111 @@
-.App {
+.App-header {
+  background: gray;
+  padding: 10px;
+}
+.App-logo {
+  width: 150px;
+}
+.tabs {
+  box-shadow: 0 4px 5px -4px gray;
+  padding: 0 30px;
+}
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  padding: 5px 30px;
+}
+.tab-item img {
+  width: 32px;
+}
+
+.tab-item.active {
+  color: #0dcaf0;
+}
+.main {
+  background: rgb(0 0 0 / 10%);
+}
+.content {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+  background: gray;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+/* search tab */
+
+.searchTab {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+/* input  */
+.input-search {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+.input-search input {
+  background-color: transparent;
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgb(94, 94, 94);
+  padding: 6px 4px;
+  font-size: 1.25rem;
+  outline: none;
+}
+.input-search label {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  color: #8a8a8a;
   pointer-events: none;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+input:focus + label,
+input:valid + label {
+  top: -12px;
+  left: 4px;
+  font-size: 0.875rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.images {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-.App-link {
-  color: #61dafb;
+.image-item {
+  position: relative;
+}
+.overlay {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-item .overlay {
+}
+
+.col-md-3 .like {
+  visibility: hidden;
+}
+.col-md-3:hover .like {
+  visibility: visible;
 }
